@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Netflix-Name-For-Streaming-Extension",
+  "name": "Movie-Name-For-Streaming-Extension",
   "version": "1.0",
   "permissions": ["activeTab", "scripting"],
   "action": {
@@ -9,7 +9,11 @@
   "content_scripts": [
     {
       "matches": ["https://www.netflix.com/watch/*"],
-      "js": ["contentScript.js"]
+      "js": ["/scripts/netflix.js"]
+    },
+    {
+      "matches": ["https://www.primevideo.com/*"],
+      "js": ["/scripts/primevideo.js"]
     }
   ]
 }
